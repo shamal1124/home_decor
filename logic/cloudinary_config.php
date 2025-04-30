@@ -1,13 +1,13 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php'; // Cloudinary PHP SDK autoload
+require_once __DIR__ . '/../vendor/autoload.php'; // Ensure correct path
 
 \Cloudinary\Configuration\Configuration::instance([
-  'cloud' => [
-    'cloud_name' => 'your_cloud_name',
-    'api_key'    => 'your_api_key',
-    'api_secret' => 'your_api_secret',
-  ],
-  'url' => [
-    'secure' => true
-  ]
+    'cloud' => [
+        'cloud_name' => 'dqsn8hxbr',
+        'api_key'    => '154194152794391',
+        'api_secret' => 'Z67j2Vh6bqc9LingNJvy6Icf2KA',
+    ],
+    'url' => [
+        'secure' => true
+    ]
 ]);

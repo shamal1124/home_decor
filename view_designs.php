@@ -112,7 +112,7 @@ $result = $conn->query($sql);
             <img src="<?php echo htmlspecialchars($row['image_url']); ?>" alt="Design Image">
             <form action="request_design.php" method="POST">
                 <input type="hidden" name="design_id" value="<?php echo $row['id']; ?>">
-                <button type="submit" class="btn-request">Request This Design</button>
+
             </form>
         </div>
     <?php

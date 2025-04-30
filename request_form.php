@@ -74,6 +74,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['design_id'])) {
 <main class="p-6">
     <h2 class="text-2xl font-bold mb-4">Request Design</h2>
 
+    <!-- Back to Browse Button -->
+    <a href="client.php" class="inline-block mb-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+        ← Back to Browse
+    </a>
+
     <div class="bg-white shadow rounded p-6">
         <h3 class="text-lg font-semibold text-purple-700"><?= htmlspecialchars($design['title']) ?></h3>
         <p class="text-sm text-gray-600"><?= htmlspecialchars($design['description']) ?></p>
