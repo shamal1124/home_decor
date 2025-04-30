@@ -31,6 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,24 +40,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Login - Home Decore</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
 </head>
-<body class="bg-gray-100 flex justify-center items-center h-screen">
-
-    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 class="text-2xl font-bold mb-6 text-center text-purple-700">Login to Home Decore</h2>
+<body>
+    <div >
+        
 
         <?php if ($error): ?>
             <p class="text-red-500 text-sm mb-4"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
 
-        <form method="POST">
-            <input type="email" name="email" placeholder="Email" class="w-full mb-4 px-4 py-2 border rounded" required>
-            <input type="password" name="password" placeholder="Password" class="w-full mb-4 px-4 py-2 border rounded" required>
+        <div class="login-container">
+        <header>
+            <img src="assets/images/logo_decora.jpg" alt="Logo" class="logo"> 
+        </header>
+        <h2>Welcome Back!</h2>
 
-            <button type="submit" class="w-full bg-purple-700 text-white py-2 rounded hover:bg-purple-800">Login</button>
+       
+        <form method="post" action="">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="continue-btn">CONTINUE</button>
+
+            <input type="hidden" name="page_action" value="login">
         </form>
 
-        <p class="mt-4 text-center text-sm">Don't have an account? <a href="signup.php" class="text-purple-600">Sign up</a></p>
+        <div class="links">
+            <a href="signup.php">Don't have an account? <span>Sign Up Here</span></a>
+        </div>
+    </div>
+
     </div>
 
 </body>

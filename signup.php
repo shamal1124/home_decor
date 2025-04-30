@@ -47,7 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="bg-gray-100 flex justify-center items-center h-screen">
 
     <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 class="text-2xl font-bold mb-6 text-center text-purple-700">Sign Up for Home Decore</h2>
+    <img src="assets/images/logo_decora.jpg" alt="Logo" class="logo" style="width: 100px; height: 100px; margin-bottom: 20px; margin-left: 140px;"> 
+        <h2 class="text-2xl font-bold mb-6 text-center" style="color: #b89a7e;">Sign Up for Home Decore</h2>
 
         <?php if ($error): ?>
             <p class="text-red-500 text-sm mb-4"><?= htmlspecialchars($error) ?></p>
@@ -64,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="designer">Designer</option>
             </select>
 
-            <button type="submit" class="w-full bg-purple-700 text-white py-2 rounded hover:bg-purple-800">Sign Up</button>
+            <button type="submit" class="w-full" style="background-color: #b89a7e; color: white; padding: 0.5rem; border-radius: 0.25rem; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#a07f63'" onmouseout="this.style.backgroundColor='#b89a7e'">Sign Up</button>
         </form>
 
         <p class="mt-4 text-center text-sm">Already have an account? <a href="login.php" class="text-purple-600">Login</a></p>
