@@ -43,11 +43,11 @@ if ($view === 'browse') {
 </head>
 <body class="bg-gray-50 min-h-screen">
 
-    <nav class="bg-purple-700 p-4 text-white flex justify-between items-center">
+    <nav style="background-color: #b89a7e; padding: 1rem; color: white; display: flex; justify-content: space-between; align-items: center;">
         <h1 class="text-xl font-semibold">Home Decore - Client</h1>
-        <div class="space-x-3">
-            <a href="client.php?view=history" class="bg-white text-purple-700 px-3 py-1 rounded hover:bg-gray-100">History</a>
-            <a href="logout.php" class="bg-white text-purple-700 px-3 py-1 rounded hover:bg-gray-100">Logout</a>
+        <div style="display: flex; gap: 1rem;">
+            <a href="client.php?view=history" style="background-color: white; color: #b89a7e; padding: 0.25rem 0.75rem; border-radius: 0.25rem; text-decoration: none;" onmouseover="this.style.backgroundColor='#f5f5f5';" onmouseout="this.style.backgroundColor='white';">History</a>
+            <a href="logout.php" style="color: #b89a7e; padding: 0.25rem 0.75rem; border-radius: 0.25rem; background-color: white; text-decoration: none;" onmouseover="this.style.backgroundColor='#f5f5f5';" onmouseout="this.style.backgroundColor='white';">Logout</a>
         </div>
     </nav>
 
@@ -81,7 +81,7 @@ if ($view === 'browse') {
                         <p class="text-sm mt-2">By: <?= htmlspecialchars($row['name']) ?></p>
                         <form action="request_form.php" method="GET" class="mt-3">
                             <input type="hidden" name="design_id" value="<?= $row['id'] ?>">
-                            <button type="submit" class="bg-purple-600 text-white px-4 py-1 rounded hover:bg-purple-700">
+                            <button type="submit" style="background-color: #b89a7e; color: white; padding: 0.25rem 0.75rem; border-radius: 0.25rem; border: none; cursor: pointer;" onmouseover="this.style.backgroundColor='#a07f6b';" onmouseout="this.style.backgroundColor='#b89a7e';">
                                 Request This Design
                             </button>
                         </form>

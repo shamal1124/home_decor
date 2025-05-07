@@ -22,12 +22,9 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>View Designs - Home Decore</title>
-    <link rel="stylesheet" href="style.css"> <!-- Optional -->
+    <!-- Optional -->
+   
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
         .design-card {
             border: 1px solid #ccc;
             padding: 15px;
@@ -70,14 +67,18 @@ $result = $conn->query($sql);
 <body>
 
     <!-- Header -->
+    <nav style="background-color: #b89a7e; padding: 1rem; color: white; display: flex; justify-content: space-between;">
+    <h1 style="font-size: 1.25rem; font-weight: 600;">Home Decore - Client</h1>
+    <a href="index.php" style="background-color: white; color: #b89a7e; padding: 0.25rem 0.75rem; border-radius: 0.25rem; text-decoration: none; height:30px;" >Back</a>
+</nav>
     <header class="bg-purple-700 text-white py-4">
         <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-semibold">Home Decore</h1>
+            <!-- <h1 class="text-3xl font-semibold">Home Decore</h1> -->
             <div>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="logout.php" class="bg-purple-500 px-4 py-2 rounded hover:bg-purple-600">Logout</a>
                 <?php else: ?>
-                    <a href="index.php" class="bg-purple-500 px-4 py-2 rounded hover:bg-purple-600">Back</a>
+                    <!-- <a href="index.php" class="bg-purple-500 px-4 py-2 rounded hover:bg-purple-600">Back</a> -->
                 <?php endif; ?>
             </div>
         </div>

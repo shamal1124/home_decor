@@ -66,16 +66,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['design_id'])) {
 </head>
 <body class="bg-gray-50 min-h-screen">
 
-<nav class="bg-purple-700 p-4 text-white flex justify-between">
-    <h1 class="text-xl font-semibold">Home Decore - Client</h1>
-    <a href="logout.php" class="bg-white text-purple-700 px-3 py-1 rounded hover:bg-gray-100">Logout</a>
+<nav style="background-color: #b89a7e; padding: 16px; color: white; display: flex; justify-content: space-between;">
+    <h1 style="font-size: 1.25rem; font-weight: 600;">Home Decore - Client</h1>
+    <a href="logout.php" style="background-color: white; color: #b89a7e; padding: 8px 12px; border-radius: 4px; text-decoration: none;">Logout</a>
 </nav>
 
 <main class="p-6">
     <h2 class="text-2xl font-bold mb-4">Request Design</h2>
 
     <!-- Back to Browse Button -->
-    <a href="client.php" class="inline-block mb-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+    <a href="client.php" style="display: inline-block; margin-bottom: 16px; background-color: #b89a7e; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none;">
         ← Back to Browse
     </a>
 
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['design_id'])) {
 
         <form action="request_form.php" method="POST" class="mt-4">
             <input type="hidden" name="design_id" value="<?= $design_id ?>">
-            <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+            <button type="submit" style="background-color: #b89a7e; color: white; padding: 8px 16px; border-radius: 4px; border: none; cursor: pointer;">
                 Confirm Request
             </button>
         </form>

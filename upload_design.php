@@ -55,11 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 </head>
 <body class="bg-gray-50 min-h-screen">
 
-<nav class="bg-purple-700 p-4 text-white flex justify-between">
+<nav class="bg-purple-700 p-4 text-white flex justify-between" style="background-color: #b89a7e;">
     <h1 class="text-xl font-semibold">Home Decore - Designer</h1>
-    <a href="../logout.php" class="bg-white text-purple-700 px-3 py-1 rounded hover:bg-gray-100">Logout</a>
-</nav>
 
+    <a href="logout.php" class="bg-white text-purple-700 px-3 py-1 rounded hover:bg-gray-100">Logout</a>
+</nav>
+<br>
+<a href="designer.php" class="bg-white text-purple-700 px-3 py-1 rounded hover:bg-gray-100">Back</a>
 <main class="p-6">
     <h2 class="text-2xl font-bold mb-4">Upload a New Design</h2>
 
@@ -102,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
             <input type="file" id="image" name="image" class="w-full p-3 border border-gray-300 rounded" required>
         </div>
 
-        <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">Upload Design</button>
+        <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700" style="background-color: #b89a7e;">Upload Design</button>
     </form>
 </main>
 

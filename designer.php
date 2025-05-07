@@ -26,15 +26,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['request_id'])) {
 </head>
 <body class="bg-gray-50 min-h-screen">
 
-<nav class="bg-purple-700 p-4 text-white flex justify-between">
-    <h1 class="text-xl font-semibold">Home Decore - Designer</h1>
-    <a href="logout.php" class="bg-white text-purple-700 px-3 py-1 rounded hover:bg-gray-100">Logout</a>
+<nav style="background-color: #b89a7e; padding: 16px; color: white; display: flex; justify-content: space-between;">
+    <h1 style="font-size: 1.25rem; font-weight: 600;">Home Decore - Designer</h1>
+    <a href="logout.php" style="background-color: white; color: #b89a7e; padding: 8px 12px; border-radius: 4px; text-decoration: none;">Logout</a>
 </nav>
 
 <main class="p-6">
     <h2 class="text-2xl font-bold mb-4">Your Uploaded Designs</h2>
 
-    <a href="upload_design.php" class="mb-4 inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Upload New Design</a>
+    <a href="upload_design.php" style="color:white; display: inline-block; margin-bottom: 16px; background-color:#b89a7e; padding: 8px 16px; border-radius: 4px; text-decoration: none;">Upload New Design</a>
 
     <!-- Display Designs -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
