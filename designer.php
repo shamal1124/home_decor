@@ -15,6 +15,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['request_id'])) {
     header("Location: designer.php");
     exit;
 }
+
+// Delete design if requested
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_design_id'])) {
+    $designId = intval($_POST['delete_design_id']);
+    $deleteQuery = "DELETE FROM designs WHERE id = $designId AND designer_id = {$_SESSION['user_id']}";
+    $conn->query($deleteQuery);
+    header("Location: designer.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +56,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['request_id'])) {
                 <img src="<?= htmlspecialchars($row['image_url']) ?>" alt="Design Image" class="w-full h-40 object-cover rounded mb-3">
                 <h3 class="text-lg font-semibold text-purple-700"><?= htmlspecialchars($row['title']) ?></h3>
                 <p class="text-sm text-gray-600"><?= htmlspecialchars($row['description']) ?></p>
-                <p class="text-sm mt-1">Room Type: <?= htmlspecialchars($row['room_type']) ?></p>
+                <p class="text-sm mt-1 mb-3">Room Type: <?= htmlspecialchars($row['room_type']) ?></p>
+
+                <form method="POST" onsubmit="return confirm('Are you sure you want to delete this design?');">
+                    <input type="hidden" name="delete_design_id" value="<?= $row['id'] ?>">
+                    <button type="submit" class="bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700">Delete</button>
+                </form>
             </div>
         <?php endwhile; ?>
     </div>
